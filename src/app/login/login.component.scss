@@ -1,0 +1,77 @@
+$primary-color: #6200ea;
+$error-color: #d32f2f;
+$background-color: #f8f9fa; // Light background for contrast
+
+.login-container {
+  max-width: 400px;
+  margin: 100px auto; // More margin for centering
+  padding: 30px;
+  background: white;
+  border-radius: 15px; // More rounded corners
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); // Stronger shadow
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  // Hover effect for the container
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  }
+
+  h2 {
+    margin-bottom: 20px;
+    font-weight: 700; // Bolder font weight
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+
+    label {
+      font-weight: bold;
+      color: #555; // Darker label color
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px; // More rounded corners for inputs
+      transition: border-color 0.3s;
+
+      &:focus {
+        border-color: $primary-color;
+        outline: none;
+        box-shadow: 0 0 5px rgba($primary-color, 0.5); // Focus shadow
+      }
+    }
+
+    .error {
+      color: $error-color;
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 8px; // Rounded button
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+
+    &:hover {
+      background-color: darken($primary-color, 10%);
+      transform: translateY(-2px); // Button lift effect
+    }
+
+    &:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+  }
+}
